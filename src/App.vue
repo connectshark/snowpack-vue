@@ -11,19 +11,22 @@
         href="https://vuejs.org"
         target="_blank"
         rel="noopener noreferrer"
-      >{{ message }}</a>
+      >{{ msg }}</a>
     </header>
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
-  data() {
+  setup () {
+    const msg = ref('Learn Vue')
     return {
-      message: "Learn Vue"
-    };
+      msg
+    }
   }
-};
+}
 </script>
 
 <style>
